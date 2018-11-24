@@ -1,0 +1,20 @@
+<ion-content padding="true">
+  <img src="../assets/imgs/logo.png">
+
+  <ion-item class="spacer" *ngIf="level >= 1" >
+      <button ion-button block  color="secondary"  (click)="abrirInfoFazendas()">Fazendas</button>
+  </ion-item>
+
+  <ion-item class="spacer" *ngIf="level >= 2">
+      <button ion-button block  color="secondary" (click)="abrirCobranca()">Cobrança</button>
+  </ion-item>
+
+  <ion-item class="spacer" *ngIf="level >= 3">
+      <button ion-button block  color="secondary" (click)="abrirAlerta()">Interditar Fazenda</button>
+  </ion-item>
+
+  <ion-item class="spacer">
+    <button ion-button block  color="danger" (click)="sair()">Sair</button>
+  </ion-item>
+  
+</ion-content>

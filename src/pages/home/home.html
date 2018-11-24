@@ -1,0 +1,25 @@
+
+<ion-content padding class="primary-font teste">
+  <img src="../assets/imgs/logo.png">
+  <div *ngIf="!salvo" >
+    <ion-item>
+      <ion-input [(ngModel)]="email"
+                 type="text"
+                 placeholder="E-mail">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="password"
+                 type="password"
+                 placeholder="Senha">
+      </ion-input>
+    </ion-item>
+  
+    <button ion-button block color="secondary" (click)="login()" >Login</button>
+  </div>
+  <div *ngIf="salvo" >
+    <ion-label class="texto-eu">Seu e-mail é {{this.email}}</ion-label>
+    <button ion-button block color="primary" (click)="biometria()" >Sou eu</button>
+    <button ion-button block color="danger" (click)="editar()" >Não sou eu</button>
+  </div>
+</ion-content>
